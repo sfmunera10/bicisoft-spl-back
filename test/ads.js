@@ -16,7 +16,7 @@ chai.use(chaiHttp);
               res.body.should.have.property('data');
               done();
             });
-      });
+      }).timeout(10000);
   });
   describe('/POST ad', () => {
       it('it should POST an ad ', (done) => {
@@ -39,7 +39,7 @@ chai.use(chaiHttp);
             resourceId = res.body.data.id;
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/GET/:id ad', () => {
       it('it should GET an ad by the given id', (done) => {
@@ -52,7 +52,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('data');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/PUT/:id ad', () => {
       it('it should UPDATE an ad given the id', (done) => {
@@ -73,7 +73,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/DELETE/:id ad', () => {
       it('it should DELETE an ad given the id', (done) => {
@@ -85,5 +85,5 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });
