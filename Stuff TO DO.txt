@@ -1,0 +1,12 @@
+﻿-Obtener locations en un travel
+-Añadir las pruebas faltantes de las operaciones de controlador
+-Git hooks faltantes
+-Mecanismo de construcción automatizado
+-Integración continua (Jenkins)
+
+//Incluir en el package.json si se desean usar los hooks de husky:
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
