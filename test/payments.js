@@ -16,7 +16,7 @@ chai.use(chaiHttp);
               res.body.should.have.property('data');
               done();
             });
-      });
+      }).timeout(10000);
   });
   describe('/POST payment', () => {
       it('it should POST an payment ', (done) => {
@@ -34,7 +34,7 @@ chai.use(chaiHttp);
             res.should.have.status(501);
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/GET/:id payment', () => {
       it('it should GET an payment by the given id', (done) => {
@@ -44,7 +44,7 @@ chai.use(chaiHttp);
             res.should.have.status(501);
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/PUT/:id payment', () => {
       it('it should UPDATE an payment given the id', (done) => {
@@ -62,7 +62,7 @@ chai.use(chaiHttp);
             res.should.have.status(501);
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/DELETE/:id payment', () => {
       it('it should DELETE an payment given the id', (done) => {
@@ -72,5 +72,5 @@ chai.use(chaiHttp);
             res.should.have.status(501);
             done();
           });
-      });
+      }).timeout(10000);
   });

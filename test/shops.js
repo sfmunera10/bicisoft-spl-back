@@ -16,7 +16,7 @@ chai.use(chaiHttp);
               res.body.should.have.property('data');
               done();
             });
-      });
+      }).timeout(10000);
   });
   describe('/POST shop', () => {
       it('it should POST a shop ', (done) => {
@@ -40,7 +40,7 @@ chai.use(chaiHttp);
             resourceId = res.body.data.id;
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/GET/:id shop', () => {
       it('it should GET a shop by the given id', (done) => {
@@ -53,7 +53,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('data');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/PUT/:id shop', () => {
       it('it should UPDATE a shop given the id', (done) => {
@@ -75,7 +75,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/DELETE/:id shop', () => {
       it('it should DELETE a shop given the id', (done) => {
@@ -87,5 +87,5 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });

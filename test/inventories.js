@@ -16,7 +16,7 @@ chai.use(chaiHttp);
               res.body.should.have.property('data');
               done();
             });
-      });
+      }).timeout(10000);
   });
   describe('/POST inventory', () => {
       it('it should POST an inventory ', (done) => {
@@ -39,7 +39,7 @@ chai.use(chaiHttp);
             resourceId = res.body.data.id;
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/GET/:id inventory', () => {
       it('it should GET an inventory by the given id', (done) => {
@@ -52,7 +52,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('data');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/PUT/:id inventory', () => {
       it('it should UPDATE an inventory given the id', (done) => {
@@ -74,7 +74,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/DELETE/:id inventory', () => {
       it('it should DELETE an inventory given the id', (done) => {
@@ -87,5 +87,5 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });

@@ -16,7 +16,7 @@ chai.use(chaiHttp);
               res.body.should.have.property('data');
               done();
             });
-      });
+      }).timeout(10000);
   });
   describe('/POST review', () => {
       it('it should POST a review ', (done) => {
@@ -39,7 +39,7 @@ chai.use(chaiHttp);
             resourceId = res.body.data.id;
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/GET/:id review', () => {
       it('it should GET a review by the given id', (done) => {
@@ -52,7 +52,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('data');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/PUT/:id review', () => {
       it('it should UPDATE a review given the id', (done) => {
@@ -74,7 +74,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/DELETE/:id review', () => {
       it('it should DELETE a review given the id', (done) => {
@@ -87,5 +87,5 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });

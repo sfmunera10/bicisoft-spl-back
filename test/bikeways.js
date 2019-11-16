@@ -16,7 +16,7 @@ chai.use(chaiHttp);
               res.body.should.have.property('data');
               done();
             });
-      });
+      }).timeout(10000);
   });
   describe('/POST bikeway', () => {
       it('it should POST a bikeway ', (done) => {
@@ -38,7 +38,7 @@ chai.use(chaiHttp);
             resourceId = res.body.data.id;
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/GET/:id bikeway', () => {
       it('it should GET a bikeway by the given id', (done) => {
@@ -51,7 +51,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('data');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/PUT/:id bikeway', () => {
       it('it should UPDATE a bikeway given the id', (done) => {
@@ -71,7 +71,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/DELETE/:id bikeway', () => {
       it('it should DELETE a bikeway given the id', (done) => {
@@ -83,5 +83,5 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });

@@ -12,6 +12,6 @@ chai.use(chaiHttp);
             .end((err, res) => {
               done();
             });
-      });
+      }).timeout(10000);
   });
   

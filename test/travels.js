@@ -16,7 +16,7 @@ chai.use(chaiHttp);
               res.body.should.have.property('data');
               done();
             });
-      });
+      }).timeout(10000);
   });
   describe('/POST travel', () => {
       it('it should POST a travel ', (done) => {
@@ -41,7 +41,7 @@ chai.use(chaiHttp);
             resourceId = res.body.data.id;
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/GET/:id travel', () => {
       it('it should GET a travel by the given id', (done) => {
@@ -54,7 +54,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('data');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/PUT/:id travel', () => {
       it('it should UPDATE a travel given the id', (done) => {
@@ -77,7 +77,7 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/DELETE/:id travel', () => {
       it('it should DELETE a travel given the id', (done) => {
@@ -89,5 +89,5 @@ chai.use(chaiHttp);
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });

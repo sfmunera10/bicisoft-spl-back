@@ -16,7 +16,7 @@ chai.use(chaiHttp);
               res.body.should.have.property('data');
               done();
             });
-      });
+      }).timeout(10000);
   });
   describe('/POST user', () => {
       it('it should POST a user ', (done) => {
@@ -44,7 +44,7 @@ chai.use(chaiHttp);
             resourceId = res.body.data.id;
             done();
           });
-      });
+      }).timeout(10000);
   });
 describe('/GET/:id user', () => {
       it('it should GET a user by the given id', (done) => {
@@ -57,7 +57,7 @@ describe('/GET/:id user', () => {
             res.body.should.have.property('data');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/PUT/:id user', () => {
       it('it should UPDATE a user given the id', (done) => {
@@ -82,7 +82,7 @@ describe('/GET/:id user', () => {
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });
   describe('/DELETE/:id user', () => {
       it('it should DELETE a user given the id', (done) => {
@@ -94,5 +94,5 @@ describe('/GET/:id user', () => {
             res.body.should.have.property('error');
             done();
           });
-      });
+      }).timeout(10000);
   });
